@@ -5,4 +5,6 @@ belong together. The chapter [Chapter 10: Modules of Eloquent JavaScript](http:/
 such division provides and shows techniques for building modules
 in JavaScript.
 
+Here you will find a version of the code in that chapter.
+
 
