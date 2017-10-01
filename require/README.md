@@ -1,5 +1,7 @@
 [See section *Require* from Chapter10 of the book *Eloquent JavaScript*](http://eloquentjavascript.net/10_modules.html)
 
+**Example of use:**
+
 ```
 [~/EJS/chapter10-modules/require(master)]$ cat main.js
 REQUIRE = require(__dirname+"/ejs-require.js");
@@ -12,6 +14,11 @@ console.log(weekDay.number("Tuesday"));
 
 var foo = REQUIRE("foo");
 console.log(foo);
+```
+
+**Example of Execution**
+
+```
 [~/EJS/chapter10-modules/require(master)]$ node main.js 
 Monday
 1
