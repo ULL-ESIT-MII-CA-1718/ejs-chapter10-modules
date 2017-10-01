@@ -1,0 +1,49 @@
+var fs = require('fs');
+var backgroundReadFile = fs.readFile;
+
+var defineCache = Object.create(null);
+var currentMod = null;
+
+function getModule(name) {
+  if (name in defineCache)
+    return defineCache[name];
+
+  var module = {
+    exports: null,
+		loaded: false,
+		onLoad: []
+  };
+  defineCache[name] = module;
+  backgroundReadFile(name+".js", function(err, code) {
+		if (err) {
+			return console.log(err);
+		}
+    currentMod = module;
+    new Function("", code)();
+  });
+  return module;
+}
+
+module.exports = function (depNames, moduleFunction) {
+  var myMod = currentMod;
+  var deps = depNames.map(getModule);
+
+  deps.forEach(function(mod) {
+    if (!mod.loaded)
+      mod.onLoad.push(whenDepsLoaded);
+  });
+
+  function whenDepsLoaded() {
+    if (!deps.every(function(m) { return m.loaded; }))
+      return;
+
+    var args = deps.map(function(m) { return m.exports; });
+    var exports = moduleFunction.apply(null, args);
+    if (myMod) {
+      myMod.exports = exports;
+      myMod.loaded = true;
+      myMod.onLoad.forEach(function(f) { f(); });
+    }
+  }
+  whenDepsLoaded();
+};
