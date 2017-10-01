@@ -23,3 +23,16 @@ a function so that **the module loader can first load its dependencies
 in the background and then call the function**, initializing the
 module, when the dependencies have been loaded. That is what the
 Asynchronous Module Definition (AMD) module system does.
+
+```
+[~/EJS/chapter10-modules/slow-loading-modules(master)]$ cat main.js 
+// global define
+define = require(__dirname+"/amd.js");
+
+define(["week-days"], function(weekDay) {
+  console.log(weekDay.name(0));
+});
+
+[~/EJS/chapter10-modules/slow-loading-modules(master)]$ node main.js 
+Sunday
+```
