@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1 id="greeting">Hello</h1>
+
+  <!-- <script src="dojo/dojo.js" data-dojo-config="async: true"></script> -->
+  <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
+            data-dojo-config="async: true"></script>
+    <script>
+        require([
+            'dojo/dom',
+            'dojo/dom-construct'
+        ], function (dom, domConstruct) {
+            var greetingNode = dom.byId('greeting');
+            domConstruct.place('<em> Dojo!</em>', greetingNode);
+        });
+    </script>
+<!--
+  <script>
+      require([
+          "app/counter"
+      ], function(counter){
+          log(counter.getValue());
+          counter.increment();
+          log(counter.getValue());
+          counter.decrement();
+          log(counter.getValue());
+      });
+  </script>
+-->
+</body>
+</html>
