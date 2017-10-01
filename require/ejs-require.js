@@ -13,11 +13,5 @@ function REQUIRE(name) {
 }
 REQUIRE.cache = Object.create(null);
 
-var weekDay = REQUIRE("week-day");
-console.log(weekDay.name(1));
-console.log(weekDay.number("Monday"));
-console.log(weekDay.name(2));
-console.log(weekDay.number("Tuesday"));
+module.exports = REQUIRE;
 
-var foo = REQUIRE("foo");
-console.log(foo);
