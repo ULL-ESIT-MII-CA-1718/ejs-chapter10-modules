@@ -1,0 +1,17 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "https://dojotoolkit.org/documentation/tutorials/1.10/hello_dojo/index.html)",
+  "scripts": {
+    "test": "static-server"
+  },
+  "keywords": [
+    "AMD",
+    "dojo"
+  ],
+  "author": "Casiano Rodriguez-Leon <casiano.rodriguez.leon@gmail.com> (https://github.com/crguezl)",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-shell": "^0.6.3"
+  }
+}
