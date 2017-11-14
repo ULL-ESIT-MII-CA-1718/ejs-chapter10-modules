@@ -42,3 +42,11 @@ define(["week-days"], function(weekDay) {
 [~/EJS/chapter10-modules/slow-loading-modules(master)]$ node main.js 
 Sunday
 ```
+
+**Debugging**
+
+```
+[~/EJS/chapter6-the-secret-life-of-objects(master)]$ cat gulpfile.js
+// En versiones v8.*  chrome://inspect en el navegador
+gulp.task('debug', shell.task('node inspect main-draw-table.js'));
+```
