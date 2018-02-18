@@ -2,7 +2,7 @@
 
 **Example of use:**
 
-```
+```js
 [~/EJS/chapter10-modules/require(master)]$ cat main.js
 REQUIRE = require(__dirname+"/ejs-require.js");
 
@@ -18,7 +18,7 @@ console.log(foo);
 
 **Example of Execution**
 
-```
+```bash
 [~/EJS/chapter10-modules/require(master)]$ node main.js 
 Monday
 1

@@ -1,0 +1,22 @@
+{
+  "name": "chapter10-modules-crguezl",
+  "version": "1.0.0",
+  "description": "[Chapter 10: Modules of Eloquent JavaScript](http://eloquentjavascript.net/10_modules.html)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter10-modules.git"
+  },
+  "author": "Casiano Rodriguez-Leon <casiano.rodriguez.leon@gmail.com> (https://github.com/crguezl)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter10-modules/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter10-modules#readme",
+  "dependencies": {
+    "gulp-shell": "^0.6.5"
+  }
+}
