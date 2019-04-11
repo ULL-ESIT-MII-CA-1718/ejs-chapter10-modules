@@ -1,4 +1,7 @@
-[See section *Require* from Chapter10 of the book *Eloquent JavaScript*](http://eloquentjavascript.net/10_modules.html)
+# How to Implement a "require" like the one in Node.js
+
+* [See section *Require* from Chapter10 of the book *Eloquent JavaScript*](http://eloquentjavascript.net/10_modules.html)
+* [The Function constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 
 **Example of use:**
 
